@@ -2,6 +2,8 @@
 
 Este é um projeto de exemplo do aplicativo "Favorite Products" que demonstra a utilização da Clean Architecture (Arquitetura Limpa) em um aplicativo Flutter.
 
+![vid1](https://github.com/DiegoSCastro/favorite_products/assets/66894278/79d52326-6508-46f8-a618-9bdab82178d4)
+
 ## Características Implementadas:
 Listagem de Produtos (Products List): O aplicativo permite que os usuários visualizem uma lista de produtos com informações detalhadas.
 
@@ -17,7 +19,7 @@ Salvamento Local: Neste projeto, utilizamos o pacote shared_preferences para arm
 
 Gestão de Estado: Utilizamos o gerenciamento de estado do Flutter para atualizar a interface do usuário de forma reativa quando os dados são modificados. Para isso, utilizamos ValueNotifier e ValueListenableBuilder para refletir as mudanças na UI.
 
-# Sobre Arquitetura Limpa (Clean Architecture):
+## Sobre Arquitetura Limpa (Clean Architecture):
 
 Camada de Domínio (Domain Layer): Nesta camada, definimos as regras de negócio e a lógica central do aplicativo. Aqui, criamos as entidades que representam os conceitos fundamentais do aplicativo e também os casos de uso, que são as ações que o usuário pode executar. Essa camada é independente de qualquer framework ou tecnologia externa, o que torna o código mais limpo e facilmente testável.
 

@@ -18,7 +18,8 @@ final class HomeSuccess extends HomeState {
   });
   List<Product> get showProducts => List<Product>.from(products)
       .where(
-        (e) => e.title.withoutDiacriticalLowerCase.contains(searchText.withoutDiacriticalLowerCase),
+        (e) => e.title.withoutDiacriticalLowerCase
+            .contains(searchText.withoutDiacriticalLowerCase),
       )
       .toList();
 }

@@ -16,7 +16,7 @@ void main() {
   when(() => mockLocalStorage.read<List<String>>(any())).thenAnswer((_) async => <String>[]);
 
   final mockGetProductsUseCase = MockGetProductsUseCase();
-  when(() => mockGetProductsUseCase.call()).thenAnswer((_) async => const Right([]));
+  when(() => mockGetProductsUseCase()).thenAnswer((_) async => const Right([]));
 
   getIt.registerSingleton<HomeController>(
     HomeController(

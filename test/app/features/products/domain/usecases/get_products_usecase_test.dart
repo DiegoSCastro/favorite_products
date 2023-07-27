@@ -22,7 +22,7 @@ void main() {
     ];
     when(() => mockRepository.getProducts()).thenAnswer((_) async => Right(products));
 
-    final result = await usecase.call();
+    final result = await usecase();
 
     expect(result, equals(Right(products)));
     verify(() => mockRepository.getProducts()).called(1);
@@ -32,7 +32,7 @@ void main() {
     final exception = Exception('Something went wrong');
     when(() => mockRepository.getProducts()).thenAnswer((_) async => Left(exception));
 
-    final result = await usecase.call();
+    final result = await usecase();
 
     expect(result, equals(Left(exception)));
     verify(() => mockRepository.getProducts()).called(1);

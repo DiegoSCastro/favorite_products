@@ -49,6 +49,7 @@ class HomeController extends ValueNotifier<HomeState> {
       value = HomeSuccess(
         products: (value as HomeSuccess).products,
         favorites: favorites,
+        searchText: (value as HomeSuccess).searchText,
       );
       saveFavorites();
     }
@@ -66,24 +67,27 @@ class HomeController extends ValueNotifier<HomeState> {
     }
   }
 
+  Future<List<Product>> loadFavoritesFromStorage() async {
+    final storageFavorites =
+        await localStorage.read<List<String>>(HomeConstants.favorites);
+
+    return storageFavorites
+            ?.map((item) => Product.fromJson(jsonDecode(item)))
+            .toList() ??
+        [];
+  }
+
+  void updateFavorites(List<Product> favorites) {
+    if (value is HomeSuccess) {
+      value = HomeSuccess(
+          products: (value as HomeSuccess).products, favorites: favorites);
+    }
+  }
+
   void loadFavorites() async {
     if (value is HomeSuccess) {
-      final storageFavorites =
-          await localStorage.read<List<String>>(HomeConstants.favorites);
-      if (storageFavorites != null) {
-        final favorites = storageFavorites
-            .map((item) => Product.fromJson(jsonDecode(item)))
-            .toList();
-
-        if (value is HomeSuccess) {
-          value = HomeSuccess(
-              products: (value as HomeSuccess).products, favorites: favorites);
-        } else {
-          value = HomeSuccess(products: [], favorites: favorites);
-        }
-      } else {
-        value = HomeSuccess(products: [], favorites: []);
-      }
+      final favorites = await loadFavoritesFromStorage();
+      updateFavorites(favorites);
     }
   }
 }

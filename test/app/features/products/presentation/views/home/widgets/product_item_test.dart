@@ -35,8 +35,6 @@ void main() {
     );
 
     expect(find.text('Test Product'), findsOneWidget);
-    // expect(find.text('This is a test product'), findsOneWidget);
-    // expect(find.text('Test Category'), findsOneWidget);
     expect(find.text('4.5 (100 reviews)'), findsOneWidget);
     expect(find.text('\$19.99'), findsOneWidget);
 

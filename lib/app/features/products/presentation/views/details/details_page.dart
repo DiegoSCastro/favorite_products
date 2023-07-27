@@ -129,7 +129,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   const SizedBox(height: 30),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

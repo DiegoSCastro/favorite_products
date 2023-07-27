@@ -3,6 +3,7 @@ import 'package:get_it/get_it.dart';
 import 'app.dart';
 
 final sl = GetIt.instance;
+
 Future<void> initServiceLocator() async {
   sl.registerLazySingleton<CustomDio>(() => CustomDio());
   sl.registerLazySingleton<LocalStorage>(() => LocalStorageImpl());

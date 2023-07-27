@@ -158,9 +158,5 @@ void main() {
               mockLocalStorage.write(HomeConstants.favorites, [expectedJson]))
           .called(1);
     });
-
-    
-
-   
   });
 }

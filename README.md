@@ -11,7 +11,7 @@ Este aplicativo foi criado na versão 3.10.6 do flutter . Para poder roda-lo é 
 Clone este repositório para a sua máquina local.
 Certifique-se de ter o Flutter SDK instalado na sua máquina.
 
-### abrir o projeto e executar o comando:
+### Abrir o projeto e executar o comando:
 
 flutter pub get
 

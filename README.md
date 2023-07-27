@@ -4,7 +4,29 @@ Este é um projeto de exemplo do aplicativo "Favorite Products" que demonstra a 
 
 ![vid1](https://github.com/DiegoSCastro/favorite_products/assets/66894278/79d52326-6508-46f8-a618-9bdab82178d4)
 
+### Instruções de Execução:
+
+Este aplicativo foi criado na versão 3.10.6 do flutter . Para poder roda-lo é necessário ter instalado uma versão superior a 3.0.0 do flutter e superior a 3.0.5 do dart.
+
+Clone este repositório para a sua máquina local.
+Certifique-se de ter o Flutter SDK instalado na sua máquina.
+
+### abrir o projeto e executar o comando:
+
+flutter pub get
+
+### Execute os testes automatizados usando o comando:
+
+flutter test.
+
+### Rodar aplicativo como usuário:
+
+Caso queira testar como usuário final ou QA, baixe e instale o arquivo abaixo em um dispositivo android.
+
+Baixar o arquivo - https://drive.google.com/file/d/1cQQpAlcTzwF6eTN0AbOLLwc0RJcyC2By/view?usp=sharing
+
 ## Características Implementadas:
+
 Listagem de Produtos (Products List): O aplicativo permite que os usuários visualizem uma lista de produtos com informações detalhadas.
 
 Detalhes do Produto (Product Details): Ao tocar em um produto na lista, o usuário é direcionado para a tela de detalhes do produto, onde pode ver informações mais detalhadas e adicioná-lo à lista de favoritos.

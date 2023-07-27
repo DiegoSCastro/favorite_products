@@ -17,7 +17,7 @@ flutter pub get
 
 ### Execute os testes automatizados usando o comando:
 
-flutter test.
+flutter test
 
 ### Rodar aplicativo como usuário:
 
